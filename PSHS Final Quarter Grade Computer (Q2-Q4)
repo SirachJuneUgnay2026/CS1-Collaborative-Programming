@@ -1,0 +1,57 @@
+SA2 = float(input("Enter the grade PERCENTAGE of your summative assessment 2: "))
+print(f"Summative Assessment 2 Grade Percentage is {SA2}")
+
+QE = float(input("Enter the grade PERCENTAGE of your quarter exam: "))
+print(f"Quarter Exam Grade Percentage is {QE}")
+
+count = int(input("Enter the number of FAs you had: "))
+fa_list = []
+for i in range(count):
+        val = float(input("Enter the grade PERCENTAGE of your FA: "))
+        fa_list.append(val)
+if count > 0:
+    FA_average = int(sum(fa_list) / len(fa_list))
+    print(f"The average of your FAs is: {FA_average} over 100%")
+else:
+    print("No grades were entered.")
+
+tentative_grade = (SA1 + SA2)*.55 / 2 + FA_average*.30 + QE*.15
+print(f"Your tentative grade is: {tentative_grade} out of 100%")
+
+last_quarter_grade = float(input("Please enter the PERCENTAGE of your final grade last quarter: "))
+final_grade = (last_quarter_grade + (2 * tentative_grade)) / 3
+print(f"Your Final Grade is {final_grade} out of 100%")
+
+if final_grade >= 96 and 100:
+    print("Your Point Equivalent Grade is 1.00")
+    print("Your Adjectival Equivalent is EXCELLENT")
+elif final_grade >= 90 and 95.99:
+    print("Your Point Equivalent Grade is 1.25")
+    print("Your Adjectival Equivalent VERY GOOD")
+elif final_grade >= 84 and 89.99:
+    print("Your Point Equivalent Grade is 1.50")
+    print("Your Adjectival Equivalent VERY GOOD")
+elif final_grade >= 78 and 83.99:
+    print("Your Point Equivalent Grade is 1.75")
+    print("Your Adjectival Equivalent GOOD")
+elif final_grade >= 72 and 77.99:
+    print("Your Point Equivalent Grade is: 2.00")
+    print("Your Adjectival Equivalent GOOD")
+elif final_grade >= 66 and 71.99:
+    print("Your Point Equivalent Grade is 2.25")
+    print("Your Adjectival Equivalent SARISFACTORY")
+elif final_grade >= 60 and 65.99:
+    print("Your Point Equivalent Grade is 2.50")
+    print("Your Adjectival Equivalent SATISFACTORY")
+elif final_grade >= 55 and 59.99:
+    print("Your Point Equivalent Grade is 2.75")
+    print("Your Adjectival Equivalent FAIR")
+elif final_grade >= 50 and 54.99:
+    print("Your Point Equivalent Grade is 3.00")
+    print("Your Adjectival Equivalent FAIR")
+elif final_grade >= 40 and 49.99:
+    print("Your Point Equivalent Grade is 4.00")
+    print("Your Adjectival Equivalent FAILED ON CONDITION")
+elif final_grade <= 40:
+    print("Your Point Equivalent Grade is 5.00")
+    print("Your Adjectival Equivalent FAILED")
