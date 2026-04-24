@@ -1,3 +1,6 @@
+SA1 = float(input("Enter the grade PERCENTAGE of your summative assessment 1: "))
+print(f"Summative Assessment 1 Grade Percentage is {SA1}")
+
 SA2 = float(input("Enter the grade PERCENTAGE of your summative assessment 2: "))
 print(f"Summative Assessment 2 Grade Percentage is {SA2}")
 
