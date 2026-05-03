@@ -1,16 +1,11 @@
 SA1 = float(input("Enter the grade PERCENTAGE of your summative assessment 1: "))
-print(f"Summative Assessment 1 Grade Percentage is {SA1}")
-
 SA2 = float(input("Enter the grade PERCENTAGE of your summative assessment 2: "))
-print(f"Summative Assessment 2 Grade Percentage is {SA2}")
-
 QE = float(input("Enter the grade PERCENTAGE of your quarter exam: "))
-print(f"Quarter Exam Grade Percentage is {QE}")
 
 count = int(input("Enter the number of FAs you had: "))
 fa_list = []
 for i in range(count):
-        val = float(input("Enter the grade PERCENTAGE of your FA: "))
+        val = float(input("Enter the grade PERCENTAGE of your Formative Assessment: "))
         fa_list.append(val)
 if count > 0:
     FA_average = int(sum(fa_list) / len(fa_list))
